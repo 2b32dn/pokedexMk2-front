@@ -8,10 +8,9 @@ class PokemonsPage extends Component {
    }
 
   componentDidMount = async () => {
-    const {pokemons} = await getPokemons();
-    this.setState({
-      pokemons
-    })
+    const results = await getPokemons();
+    this.setState({pokemons: results})
+    console.log(results.results)
   }
   
   render() { 
