@@ -9,16 +9,17 @@ class PokemonsPage extends Component {
     pokemons: null
    }
 
-  getPokemon = async (url) => {
-    const pokemonData = await fetch(url)
-    const pokemonJSON = await pokemonData.json()
-    return  this.setState({pokemons: pokemonJSON})
-  }
-
   componentDidMount = async () => {
     try{
-      const pokemonsData = await Promise.all([getPokemons()]);
-      pokemonsData[0].results.map( item => this.getPokemon(item.url))
+      const pokemons = await getPokemons();
+      console.log(pokemons)
+      const pokemonData = await Promise.all(
+        pokemons.results.map( async result => {
+          const pokemon = await fetch(result.url)
+          return pokemon.json()
+        })
+      )
+      this.setState({pokemons: pokemonData})
     } catch (err) {
       console.log(err)
     }
@@ -31,7 +32,11 @@ class PokemonsPage extends Component {
       ( pokemons ) 
       ? 
         <div> 
-          
+          {this.state.pokemons.map( base_info => 
+            <div key={base_info.name}>
+              <img alt={base_info.name} src={base_info.sprites.front_default}/>
+              {Capitalize(base_info.name)}
+            </div>)}
         </div>
       :
         <div>No Pokemons..</div>
