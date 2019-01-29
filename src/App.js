@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header/>
-          <main>
+          <main className="main">
             <Routes/>
           </main>
         <Footer/>
