@@ -1,6 +1,6 @@
-const API_URL = "https://pokeapi.co/api/v2/pokemon/?limit=60/"
+const API_URL = "https://pokeapi.co/api/v2/pokemon/?limit=20/"
 
 export async function getPokemons () {
-  const response = await fetch(API_URL)
-  return response.json()
+  const pokeData = await fetch(API_URL)
+  return pokeData.json()
 }

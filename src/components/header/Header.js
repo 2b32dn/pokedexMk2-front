@@ -9,7 +9,7 @@ const Header = props => (
     <nav className="nav-elements">
       <ToggleButton></ToggleButton>
       {/* <img src="https://upload.wikimedia.org/wikipedia/en/3/39/Pokeball.PNG" alt="Pokeball" className="nav-logo">
-        
+      
       </img> */}
       <div className="nav-logo">
         <li><NavLink to="/">Pokemon</NavLink></li>
