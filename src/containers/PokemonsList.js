@@ -4,6 +4,14 @@ import Capitalize from '../tools/Capitalize';
 // import Modal from '../components/modal/Modal'
 
 const PokemonsList = ({ pokemons, show, targetPokemon, pokemonExtra }) => {
+	async function loadingPokemonData(id) {
+		try {
+			const pokemon = await Promise.all(targetPokemon(id), pokemonExtra(id));
+			return pokemon;
+		} catch (err) {
+			console.log(err);
+		}
+	}
 	return (
 		<div>
 			{pokemons.map((base_info) => (
@@ -11,9 +19,8 @@ const PokemonsList = ({ pokemons, show, targetPokemon, pokemonExtra }) => {
 					<img alt={base_info.name} src={base_info.sprites.front_default} />
 					<button
 						onClick={() => {
+							loadingPokemonData(base_info.id);
 							show();
-              targetPokemon(base_info.id);
-              pokemonExtra(base_info.id);
 						}}
 						value={base_info.id}
 					>

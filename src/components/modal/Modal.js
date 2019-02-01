@@ -1,5 +1,5 @@
 import React from 'react';
-// import Capitalize from '../../tools/Capitalize'
+import Capitalize from '../../tools/Capitalize'
 
 const Modal = ({ show, pokemon, pokemonExtra }) => {
 	let modalClasses = 'modal-hidden';
@@ -11,18 +11,18 @@ const Modal = ({ show, pokemon, pokemonExtra }) => {
 	return pokemon ? (
 		<div className={modalClasses}>
 			<img alt={pokemon.name} src={pokemon.sprites.front_default} />
-      {pokemon.name}
+      {Capitalize(pokemon.name)}
       {pokemon.id}
-      {pokemonExtra.genera[2].genus}
-			{pokemon.types.map((type) => <div key={type.type.name}>{type.type.name}</div>)}
-			{pokemon.abilities.map((ability) => <div key={ability.ability.name}>{ability.ability.name}</div>)}
+      {/* {pokemonExtra.genera[2].genus} */}
+			{pokemon.types.map((type) => <div key={type.type.name}>{Capitalize(type.type.name)}</div>)}
+			{pokemon.abilities.map((ability) => <div key={ability.ability.name}>{Capitalize(ability.ability.name)}</div>)}
 			{pokemon.stats.map((stat) => (
 				<div key={stat.stat.name}>
-					{stat.base_stat}:{stat.stat.name}
+					{Capitalize(stat.stat.name)}:{stat.base_stat}
 				</div>
       ))}
-      {pokemon.moves.map(move=> <div key={move.move.name}>{move.move.name}</div>)}
-      {pokemonExtra.flavor_text_entries[1].flavor_text}
+      {pokemon.moves.map(move=> <div key={move.move.name}>{Capitalize(move.move.name)}</div>)}
+      {/* {pokemonExtra.flavor_text_entries[1].flavor_text} */}
 		</div>
 	) : (
 		<div className={modalClasses}>No Data</div>
