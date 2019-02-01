@@ -3,7 +3,7 @@ import React from 'react'
 const RightButton = () => {
   return (
     <div>
-      <button>Next</button>
+      <button>Next Button</button>
     </div>
   )
 }
