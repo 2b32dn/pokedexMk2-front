@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 import ToggleButton from '../sidebar/ToggleButton'
@@ -12,15 +12,15 @@ const Header = props => (
       
       </img> */}
       <div className="nav-logo">
-        <li><NavLink to="/">Pokemon</NavLink></li>
+        <li><Link to="/">Pokemon</Link></li>
       </div>
       <div className="nav-spacer"></div>
       <div className="nav-links">
         <ul>
-          <li><NavLink to="/">Home</NavLink></li>
-          <li><NavLink to="/">Home</NavLink></li>
-          <li><NavLink to="/">Home</NavLink></li>
-          <li><NavLink to="/">Home</NavLink></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/">Home</Link></li>
         </ul>
       </div>
     </nav>

@@ -1,18 +1,51 @@
 import React, { Component } from 'react';
 
-// import { Link } from 'react-router-dom'
-import { getPokemons } from '../API';
-import Capitalize from '../tools/Capitalize'
+import { getPokemons, getPokemon, getPokemonExtra } from '../API';
+import PokemonsList from './PokemonsList';
+
+import Modal from '../components/modal/Modal'
+import Backdrop from '../components/modal/Backdrop'
 
 class PokemonsPage extends Component {
-  state = { 
-    pokemons: null
-   }
+  state = {
+    pokemons: null,
+    pokemon: null,
+    pokemonExtra: null,
+    modalOpen: false,
+  }
+
+  openModal = () => {
+    this.setState( e => {
+      return { 
+        modalOpen: !e.modalOpen
+      }
+    })
+  }
+  
+  closeModal = () => {
+    this.setState({ modalOpen: false })
+  }
+
+  targetPokemon = async (id) => {
+    try{
+      const targetPokemonData = await getPokemon(id);
+      this.setState({pokemon: targetPokemonData})
+    } catch (err) {
+      console.log(err)
+    }
+  }
+  targetPokemonExtra = async (id) => {
+    try{
+      const targetPokemonData = await getPokemonExtra(id);
+      this.setState({pokemonExtra: targetPokemonData})
+    } catch (err) {
+      console.log(err)
+    }
+  }
 
   componentDidMount = async () => {
     try{
       const pokemons = await getPokemons();
-      console.log(pokemons)
       const pokemonData = await Promise.all(
         pokemons.results.map( async result => {
           const pokemon = await fetch(result.url)
@@ -26,20 +59,24 @@ class PokemonsPage extends Component {
   }
   
   render() { 
-    const { pokemons } = this.state;
-    console.log(pokemons)
+    const { pokemons, pokemon, pokemonExtra } = this.state;
+    // console.log('pokemons', pokemons)
+    // console.log("pokemon", pokemon)
+    // console.log("pokemonExtra", pokemonExtra)
+    let backDrop;
+    if(this.state.modalOpen) {
+      backDrop = <Backdrop closeModal={this.closeModal}/>
+    }
     return ( 
       ( pokemons ) 
       ? 
-        <div> 
-          {this.state.pokemons.map( base_info => 
-            <div key={base_info.name}>
-              <img alt={base_info.name} src={base_info.sprites.front_default}/>
-              {Capitalize(base_info.name)}
-            </div>)}
+        <div>
+          <PokemonsList pokemons={pokemons} show={this.openModal} targetPokemon={this.targetPokemon} pokemonExtra={this.targetPokemonExtra}/>
+          <Modal pokemons={pokemons} pokemon={pokemon} pokemonExtra={pokemonExtra} show={this.state.modalOpen} />
+          {backDrop}
         </div>
       :
-        <div>No Pokemons..</div>
+        <div>Loading Pokemons...</div>
      );
   }
 }
