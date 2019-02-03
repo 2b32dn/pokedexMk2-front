@@ -1,9 +1,9 @@
 import React from 'react'
 
-const RightButton = () => {
+const RightButton = ({pokemonNext}) => {
   return (
     <div>
-      <button>Next Button</button>
+      <button onClick={pokemonNext}>Next Button</button>
     </div>
   )
 }
