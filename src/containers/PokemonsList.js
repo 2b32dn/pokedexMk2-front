@@ -16,7 +16,7 @@ const PokemonsList = ({ pokemons, show, targetPokemon, pokemonExtra }) => {
 		<div className="pokemon-main">
 			{pokemons.map((base_info) => (
 				<div key={base_info.name} className="pokemon-spotlight">
-					<img alt={base_info.name} src={base_info.sprites.front_default} />
+					<img alt={base_info.name} src={base_info.sprites.front_default} className="pokemon-image" />
 					<button
 						onClick={() => {
 							// loadingPokemonData(base_info.id);
@@ -25,6 +25,7 @@ const PokemonsList = ({ pokemons, show, targetPokemon, pokemonExtra }) => {
 							pokemonExtra(base_info.id)
 						}}
 						value={base_info.id}
+						className="pokmon-button"
 					>
 						{Capitalize(base_info.name)}
 					</button>

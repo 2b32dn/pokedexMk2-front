@@ -29,10 +29,6 @@ $main_color: rgb(243,43,67);
   }
 }
 
-.nav-spacer{
-  flex: 1;
-}
-
 .nav-links{
   ul{
     margin: 0;
@@ -67,9 +63,9 @@ $main_color: rgb(243,43,67);
   text-align: center;
 }
 
-.pokemon-spotlight{
+.pokemon-spotlight {
   display: inline-grid;
-  margin: 2px;
+  margin: 10px;
 }
 
 
@@ -99,12 +95,6 @@ $main_color: rgb(243,43,67);
 
 // Modal
 
-.modal-top{
-  height: 1.25rem;
-  width: 100%;
-  background: $main_color;
-}
-
 .modal{
   position: fixed;
   left: 35%;
@@ -118,8 +108,76 @@ $main_color: rgb(243,43,67);
   z-index: 2;
   overflow: auto;
 }
+
 .modal-hidden{
   display: none;
+}
+
+.modal-pokemon-name {
+  // width: 100%;
+  background: $main_color;
+  height: 4rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 2.3em;
+}
+
+.modal-img-stats {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px;
+  .modal-img{
+    display: block;
+    margin: auto;
+    padding: 1rem;
+    border: 1px solid rgb(206, 202, 202);
+  }
+  .modal-stats{
+    margin-left: 2rem;
+    ul{
+      list-style: none;
+      margin: 0;
+      padding: 2px;
+    }
+  }
+}
+
+.modal-types {
+  margin: auto;
+  display: flex;
+}
+
+.modal-characteristics{
+  background: $main_color;
+  color: white;
+  margin: 0 10px;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.modal-moves-title{
+  background: $main_color;
+  margin: 0 10px;
+  color: white;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 1.2rem;
+  
+}
+
+.modal-moves{
+  margin: 1rem;
+  padding: 1rem;
 }
 
 //Back-Drop
@@ -134,3 +192,181 @@ $main_color: rgb(243,43,67);
   overflow: auto;
   z-index: 1;
 }
+
+// Spacer
+
+.spacer {
+  flex: 1;
+}
+
+// Types
+
+.normal{
+  background: transparent;
+  width: 4rem;
+  height: 1.5rem;
+  border: 2.5px solid #EE8130;
+  border-radius: 5px;
+  text-align: center;
+  margin: 5px;
+}
+.fire{
+  background: transparent;
+  width: 4rem;
+  height: 1.5rem;
+  border: 2.5px solid #EE8130;
+  border-radius: 5px;
+  text-align: center;
+  margin: 5px;
+}
+.water{
+  background: transparent;
+  width: 4rem;
+  height: 1.5rem;
+  border: 2.5px solid #6390F0;
+  border-radius: 5px;
+  text-align: center;
+  margin: 5px;
+}
+.electric{
+  background: transparent;
+  width: 4rem;
+  height: 1.5rem;
+  border: 2.5px solid #F7D02C;
+  border-radius: 5px;
+  text-align: center;
+  margin: 5px;
+}
+.grass{
+  background: transparent;
+  width: 4rem;
+  height: 1.5rem;
+  border: 2.5px solid #7AC74C;
+  border-radius: 5px;
+  text-align: center;
+  margin: 5px;
+}
+.ice{
+  background: transparent;
+  width: 4rem;
+  height: 1.5rem;
+  border: 2.5px solid #96D9D6;
+  border-radius: 5px;
+  text-align: center;
+  margin: 5px;
+}
+.fighting{
+  background: transparent;
+  width: 4rem;
+  height: 1.5rem;
+  border: 2.5px solid #C22E28;
+  border-radius: 5px;
+  text-align: center;
+  margin: 5px;
+}
+.poison{
+  background: transparent;
+  width: 4rem;
+  height: 1.5rem;
+  border: 2.5px solid #A33EA1;
+  border-radius: 5px;
+  text-align: center;
+  margin: 5px;
+}
+.ground{
+  background: transparent;
+  width: 4rem;
+  height: 1.5rem;
+  border: 2.5px solid #E2BF65;
+  border-radius: 5px;
+  text-align: center;
+  margin: 5px;
+}
+.flying{
+  background: transparent;
+  width: 4rem;
+  height: 1.5rem;
+  border: 2.5px solid #A98FF3;
+  border-radius: 5px;
+  text-align: center;
+  margin: 5px;
+}
+.psychic{
+  background: transparent;
+  width: 4rem;
+  height: 1.5rem;
+  border: 2.5px solid #F95587;
+  border-radius: 5px;
+  text-align: center;
+  margin: 5px;
+}
+.bug{
+  background: transparent;
+  width: 4rem;
+  height: 1.5rem;
+  border: 2.5px solid #A6B91A;
+  border-radius: 5px;
+  text-align: center;
+  margin: 5px;
+}
+.rock{
+  background: transparent;
+  width: 4rem;
+  height: 1.5rem;
+  border: 2.5px solid #B6A136;
+  border-radius: 5px;
+  text-align: center;
+  margin: 5px;
+}
+.ghost{
+  background: transparent;
+  width: 4rem;
+  height: 1.5rem;
+  border: 2.5px solid #735797;
+  border-radius: 5px;
+  text-align: center;
+  margin: 5px;
+}
+.dragon{
+  background: transparent;
+  width: 4rem;
+  height: 1.5rem;
+  border: 2.5px solid #6F35FC;
+  border-radius: 5px;
+  text-align: center;
+  margin: 5px;
+}
+.dark{
+  background: transparent;
+  width: 4rem;
+  height: 1.5rem;
+  border: 2.5px solid #705746;
+  border-radius: 5px;
+  text-align: center;
+  margin: 5px;
+}
+.steel{
+  background: transparent;
+  width: 4rem;
+  height: 1.5rem;
+  border: 2.5px solid #B7B7CE;
+  border-radius: 5px;
+  text-align: center;
+  margin: 5px;
+}
+.fairy{
+  background: transparent;
+  width: 4rem;
+  height: 1.5rem;
+  border: 2.5px solid #D685AD;
+  border-radius: 5px;
+  text-align: center;
+  margin: 5px;
+}
+
+// Type-Pokemon
+
+// .water-pokemon{
+//   background: #6390F0;
+//   color: white;
+// }

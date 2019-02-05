@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-
 import ToggleButton from '../sidebar/ToggleButton'
 
 const Header = props => (
@@ -14,7 +13,7 @@ const Header = props => (
       <div className="nav-logo">
         <li><Link to="/">Pokemon</Link></li>
       </div>
-      <div className="nav-spacer"></div>
+      <div className="spacer"></div>
       <div className="nav-links">
         <ul>
           <li><Link to="/">Home</Link></li>

@@ -7,20 +7,57 @@ const Modal = ({ show, pokemon, pokemonExtra }) => {
 		modalClasses = 'modal';
   }
   // console.log(pokemon)
-  // console.log(pokemonExtra)
+	console.log(pokemonExtra)
+	
+	
 	return pokemon ? (
-		<div className={modalClasses}>
-			<img alt={pokemon.name} src={pokemon.sprites.front_default} />
-      {Capitalize(pokemon.name)}
-      {pokemon.id}
-			{pokemon.types.map((type) => <div key={type.type.name}>{Capitalize(type.type.name)}</div>)}
-			{pokemon.abilities.map((ability) => <div key={ability.ability.name}>{Capitalize(ability.ability.name)}</div>)}
-			{pokemon.stats.map((stat) => (
-				<div key={stat.stat.name}>
-					{Capitalize(stat.stat.name)}:{stat.base_stat}
+		<div className={modalClasses} >
+
+			<div className="modal-pokemon-name">
+				{Capitalize(pokemon.name)}
+			</div>
+
+			<div className="modal-img-stats">
+				<img alt={pokemon.name} src={pokemon.sprites.front_default} className="modal-img"/>
+				<div className="modal-stats">
+					{pokemon.stats.reverse().map((stat) => (
+						<ul key={stat.stat.name}>
+							<li>
+								{Capitalize(stat.stat.name).replace(/-/g, ' ')} 
+							</li>
+						</ul>
+					))}
 				</div>
-      ))}
-      {pokemon.moves.map(move=> <div key={move.move.name}>{Capitalize(move.move.name)}</div>)}
+				<div className="modal-stats">
+					{pokemon.stats.reverse().map((stat) => (
+						<ul key={stat.stat.name}>
+							<li>
+								{stat.base_stat}
+							</li>
+						</ul>
+					))}
+				</div>
+				<div className="modal-types">
+					{pokemon.types.map((type) => 
+						<div key={type.type.name} className={type.type.name}>
+							{Capitalize(type.type.name)}
+						</div>
+					)}
+				</div>
+			</div>
+
+			<div>
+				<div className="modal-characteristics">Characteristics</div>
+				{pokemon.abilities.map((ability) => <div key={ability.ability.name}>{Capitalize(ability.ability.name).replace(/-/g, ' ')}</div>)}
+			</div>
+
+			<div>
+				<div className="modal-moves-title">Moves</div>
+			</div>
+
+			<div className="modal-moves">
+     		{pokemon.moves.map(move=> <div key={move.move.name}>{Capitalize(move.move.name).replace(/-/g, ' ')}</div>)}
+			</div>
 		</div>
 	) : (
 		<div className={modalClasses}>No Data</div>

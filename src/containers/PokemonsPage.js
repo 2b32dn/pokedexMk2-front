@@ -5,8 +5,8 @@ import PokemonsList from './PokemonsList';
 
 import Modal from '../components/modal/Modal';
 import Backdrop from '../components/modal/Backdrop';
-import LeftButton from '../components/buttons/LeftButton';
-import RightButton from '../components/buttons/RightButton';
+// import LeftButton from '../components/buttons/LeftButton';
+// import RightButton from '../components/buttons/RightButton';
 
 class PokemonsPage extends Component {
 	state = {
@@ -111,7 +111,7 @@ class PokemonsPage extends Component {
 		}
 		return pokemons ? (
 			<div>
-				<LeftButton />
+				{/* <LeftButton /> */}
 				<PokemonsList
 					pokemons={pokemons}
 					show={this.openModal}
@@ -119,7 +119,7 @@ class PokemonsPage extends Component {
 					pokemonExtra={this.targetPokemonExtra}
 				/>
 				<Modal pokemons={pokemons} pokemon={pokemon} pokemonExtra={pokemonExtra} show={this.state.modalOpen} />
-				<RightButton pokemonNext={this.nextPokemonList}/>
+				{/* <RightButton pokemonNext={this.nextPokemonList}/> */}
 				{backDrop}
 			</div>
 		) : (
