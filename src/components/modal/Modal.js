@@ -1,15 +1,15 @@
 import React from 'react';
 import Capitalize from '../../tools/Capitalize'
 
+
 const Modal = ({ show, pokemon, pokemonExtra }) => {
 	let modalClasses = 'modal-hidden';
 	if (show) {
 		modalClasses = 'modal';
   }
-  // console.log(pokemon)
-	console.log(pokemonExtra)
-	
-	
+	console.log(pokemon)
+	// console.log(pokemonExtra)
+
 	return pokemon ? (
 		<div className={modalClasses} >
 
@@ -21,7 +21,7 @@ const Modal = ({ show, pokemon, pokemonExtra }) => {
 				<img alt={pokemon.name} src={pokemon.sprites.front_default} className="modal-img"/>
 				<div className="modal-stats">
 					{pokemon.stats.reverse().map((stat) => (
-						<ul key={stat.stat.name}>
+						<ul key={stat.stat.name} className="modal-stats-name">
 							<li>
 								{Capitalize(stat.stat.name).replace(/-/g, ' ')} 
 							</li>
@@ -31,9 +31,12 @@ const Modal = ({ show, pokemon, pokemonExtra }) => {
 				<div className="modal-stats">
 					{pokemon.stats.reverse().map((stat) => (
 						<ul key={stat.stat.name}>
-							<li>
-								{stat.base_stat}
-							</li>
+							<span className="modal-stats-bar">
+								<div className="modal-stats-front" style={{width: `${stat.base_stat}%`}}>{stat.base_stat}</div>
+								<div className="modal-stats-back">
+								pokemon
+								</div>
+							</span>
 						</ul>
 					))}
 				</div>
@@ -48,7 +51,9 @@ const Modal = ({ show, pokemon, pokemonExtra }) => {
 
 			<div>
 				<div className="modal-characteristics">Characteristics</div>
-				{pokemon.abilities.map((ability) => <div key={ability.ability.name}>{Capitalize(ability.ability.name).replace(/-/g, ' ')}</div>)}
+				<div>
+					{pokemon.abilities.map((ability) => <div key={ability.ability.name} className="modal-abilities">{Capitalize(ability.ability.name).replace(/-/g, ' ')}</div>)}
+				</div>
 			</div>
 
 			<div>

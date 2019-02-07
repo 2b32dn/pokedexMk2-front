@@ -104,7 +104,7 @@ class PokemonsPage extends Component {
 		// console.log('pokemons', pokemons)
 		// console.log("pokemon", pokemon)
 		// console.log("pokemonExtra", pokemonExtra)
-		console.log(nextPokemons)
+		// console.log(nextPokemons)
 		let backDrop;
 		if (this.state.modalOpen) {
 			backDrop = <Backdrop closeModal={this.closeModal} />;

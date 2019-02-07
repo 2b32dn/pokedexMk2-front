@@ -14,12 +14,13 @@ const Header = props => (
         <li><Link to="/">Pokemon</Link></li>
       </div>
       <div className="spacer"></div>
+      <div>Search</div>
       <div className="nav-links">
         <ul>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/">Home</Link></li>
+          <li><Link to="/">Login</Link></li>
+          <li><Link to="/">Logout</Link></li>
         </ul>
       </div>
     </nav>
