@@ -7,12 +7,11 @@ const Modal = ({ show, pokemon, pokemonExtra }) => {
 	if (show) {
 		modalClasses = 'modal';
   }
-	console.log(pokemon)
-	// console.log(pokemonExtra)
 
 	return pokemon ? (
 		<div className={modalClasses} >
-
+			
+			{console.log(pokemon.types)}
 			<div className="modal-pokemon-name">
 				{Capitalize(pokemon.name)}
 			</div>
