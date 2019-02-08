@@ -1,4 +1,14 @@
 $main_color: rgb(243,43,67);
+
+
+// Pokemons-page
+
+.pokemons-page {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
 // Nav-Bar
 
 .nav-bar {
@@ -97,13 +107,11 @@ $main_color: rgb(243,43,67);
 
 .modal{
   position: fixed;
-  left: 35%;
   top: 0;
   height: 100%;
   width: auto;
-  margin: 0;
+  margin: auto;
   background: white;
-  border: 1px solid black;
   box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
   z-index: 2;
   overflow: auto;
@@ -114,7 +122,6 @@ $main_color: rgb(243,43,67);
 }
 
 .modal-pokemon-name {
-  // width: 100%;
   background: $main_color;
   height: 4rem;
   color: white;
@@ -229,7 +236,7 @@ $main_color: rgb(243,43,67);
 
 // Types
 
-.normal{
+.normal-type{
   background: transparent;
   width: 4rem;
   height: 1.5rem;
@@ -238,7 +245,7 @@ $main_color: rgb(243,43,67);
   text-align: center;
   margin: 5px;
 }
-.fire{
+.fire-type{
   background: transparent;
   width: 4rem;
   height: 1.5rem;
@@ -247,7 +254,7 @@ $main_color: rgb(243,43,67);
   text-align: center;
   margin: 5px;
 }
-.water{
+.water-type{
   background: transparent;
   width: 4rem;
   height: 1.5rem;
@@ -256,7 +263,7 @@ $main_color: rgb(243,43,67);
   text-align: center;
   margin: 5px;
 }
-.electric{
+.electric-type{
   background: transparent;
   width: 4rem;
   height: 1.5rem;
@@ -265,7 +272,7 @@ $main_color: rgb(243,43,67);
   text-align: center;
   margin: 5px;
 }
-.grass{
+.grass-type{
   background: transparent;
   width: 4rem;
   height: 1.5rem;
@@ -274,7 +281,7 @@ $main_color: rgb(243,43,67);
   text-align: center;
   margin: 5px;
 }
-.ice{
+.ice-type{
   background: transparent;
   width: 4rem;
   height: 1.5rem;
@@ -283,7 +290,7 @@ $main_color: rgb(243,43,67);
   text-align: center;
   margin: 5px;
 }
-.fighting{
+.fighting-type{
   background: transparent;
   width: 4rem;
   height: 1.5rem;
@@ -292,7 +299,7 @@ $main_color: rgb(243,43,67);
   text-align: center;
   margin: 5px;
 }
-.poison{
+.poison-type{
   background: transparent;
   width: 4rem;
   height: 1.5rem;
@@ -301,7 +308,7 @@ $main_color: rgb(243,43,67);
   text-align: center;
   margin: 5px;
 }
-.ground{
+.ground-type{
   background: transparent;
   width: 4rem;
   height: 1.5rem;
@@ -310,7 +317,7 @@ $main_color: rgb(243,43,67);
   text-align: center;
   margin: 5px;
 }
-.flying{
+.flying-type{
   background: transparent;
   width: 4rem;
   height: 1.5rem;
@@ -319,7 +326,7 @@ $main_color: rgb(243,43,67);
   text-align: center;
   margin: 5px;
 }
-.psychic{
+.psychic-type{
   background: transparent;
   width: 4rem;
   height: 1.5rem;
@@ -328,7 +335,7 @@ $main_color: rgb(243,43,67);
   text-align: center;
   margin: 5px;
 }
-.bug{
+.bug-type{
   background: transparent;
   width: 4rem;
   height: 1.5rem;
@@ -337,7 +344,7 @@ $main_color: rgb(243,43,67);
   text-align: center;
   margin: 5px;
 }
-.rock{
+.rock-type{
   background: transparent;
   width: 4rem;
   height: 1.5rem;
@@ -346,7 +353,7 @@ $main_color: rgb(243,43,67);
   text-align: center;
   margin: 5px;
 }
-.ghost{
+.ghost-type{
   background: transparent;
   width: 4rem;
   height: 1.5rem;
@@ -355,7 +362,7 @@ $main_color: rgb(243,43,67);
   text-align: center;
   margin: 5px;
 }
-.dragon{
+.dragon-type{
   background: transparent;
   width: 4rem;
   height: 1.5rem;
@@ -364,7 +371,7 @@ $main_color: rgb(243,43,67);
   text-align: center;
   margin: 5px;
 }
-.dark{
+.dark-type{
   background: transparent;
   width: 4rem;
   height: 1.5rem;
@@ -373,7 +380,7 @@ $main_color: rgb(243,43,67);
   text-align: center;
   margin: 5px;
 }
-.steel{
+.steel-type{
   background: transparent;
   width: 4rem;
   height: 1.5rem;
@@ -382,7 +389,7 @@ $main_color: rgb(243,43,67);
   text-align: center;
   margin: 5px;
 }
-.fairy{
+.fairy-type{
   background: transparent;
   width: 4rem;
   height: 1.5rem;
@@ -394,7 +401,12 @@ $main_color: rgb(243,43,67);
 
 // Type-Pokemon
 
-// .water-pokemon{
-//   background: #6390F0;
-//   color: white;
-// }
+.water-pokemon{
+  background: #6390F0;
+}
+.fire-pokemon{
+  background: #EE8130;
+}
+.flying-pokemon{
+  background: #A98FF3;
+}

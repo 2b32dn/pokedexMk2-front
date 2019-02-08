@@ -2,16 +2,19 @@ import React from 'react';
 import Capitalize from '../../tools/Capitalize'
 
 
-const Modal = ({ show, pokemon, pokemonExtra }) => {
+const Modal = ({ show, pokemon, pokemonExtra, pkmnTypes }) => {
 	let modalClasses = 'modal-hidden';
 	if (show) {
 		modalClasses = 'modal';
-  }
-
+	}
+	console.log(pokemon)
+	// let type = pokemon.types.map( types => {
+		
+	// })
 	return pokemon ? (
 		<div className={modalClasses} >
 			
-			{console.log(pokemon.types)}
+
 			<div className="modal-pokemon-name">
 				{Capitalize(pokemon.name)}
 			</div>
@@ -41,7 +44,7 @@ const Modal = ({ show, pokemon, pokemonExtra }) => {
 				</div>
 				<div className="modal-types">
 					{pokemon.types.map((type) => 
-						<div key={type.type.name} className={type.type.name}>
+						<div key={type.type.name} className={`${type.type.name}-type`}>
 							{Capitalize(type.type.name)}
 						</div>
 					)}
