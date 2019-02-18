@@ -47,10 +47,7 @@ const Modal = ({ show, pokemon, pokemonExtra, pkmnTypes }) => {
 				</div>
 			</div>
 			<div className="modal-characteristics-title">Characteristics</div>
-				<div>
-					{pokemonExtra.genera.map( genus => (genus.language.name === 'en')? <div key={genus.genus}>{genus.genus.replace(/é/g, 'e')}</div> : null)}
-				</div>
-				<div>
+				{/* <div>
 					{pokemonExtra.flavor_text_entries.map( (entry, id) => 
 						(entry.version.name === "omega-ruby" && entry.language.name === "en" || entry.version.name === "ultra-sun" && entry.language.name === "en" )
 						? 
@@ -58,15 +55,16 @@ const Modal = ({ show, pokemon, pokemonExtra, pkmnTypes }) => {
 						: 
 							null
 					)}
-				</div>
+				</div> */}
 				{/* <div>
 					Habitat: {pokemonExtra.habitat.name}
 				</div> */}
-				<div>
-					Egg Group: {pokemonExtra.egg_groups.map(group => <div key={group.name}>{group.name}</div>)}
-				</div>
 			<div className="modal-characteristics">
-				{pokemon.abilities.map((ability) => <div key={ability.ability.name}>{Capitalize(ability.ability.name).replace(/-/g, ' ')}</div>)}
+				<div>
+					{pokemonExtra.genera.map( genus => (genus.language.name === 'en')? <div key={genus.genus}>{genus.genus.replace(/é/g, 'e')}</div> : null)}
+				</div>
+					Egg Group: {pokemonExtra.egg_groups.map(group => <li key={group.name}>{Capitalize(group.name)}</li>)}
+					Abilities: {pokemon.abilities.map((ability) => <div key={ability.ability.name}>{Capitalize(ability.ability.name).replace(/-/g, ' ')}</div>)}
 			</div>
 		 	<div className="modal-moves-title">Moves</div>
 			<div className="modal-moves">
