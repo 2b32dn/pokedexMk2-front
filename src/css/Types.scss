@@ -1,0 +1,79 @@
+// Types
+
+.normal-type{
+  background: transparent;
+  width: 4rem;
+  height: 1.5rem;
+  border: 2.5px solid $normal;
+  border-radius: 5px;
+  text-align: center;
+  margin: 5px;
+}
+.fire-type{
+  @extend .normal-type;
+  border: 2.5px solid $fire;
+}
+.water-type{
+  @extend .normal-type;
+  border: 2.5px solid $water;
+}
+.electric-type{
+  @extend .normal-type;
+  border: 2.5px solid $electric;
+}
+.grass-type{
+  @extend .normal-type;
+  border: 2.5px solid $grass;
+}
+.ice-type{
+  @extend .normal-type;
+  border: 2.5px solid $ice;
+}
+.fighting-type{
+  @extend .normal-type;
+  border: 2.5px solid $fighting;
+}
+.poison-type{
+  @extend .normal-type;
+  border: 2.5px solid $poison;
+}
+.ground-type{
+  @extend .normal-type;
+  border: 2.5px solid $ground;
+}
+.flying-type{
+  @extend .normal-type;
+  border: 2.5px solid $flying;
+}
+.psychic-type{
+  @extend .normal-type;
+  border: 2.5px solid $psychic;
+}
+.bug-type{
+  @extend .normal-type;
+  border: 2.5px solid $bug;
+}
+.rock-type{
+  @extend .normal-type;
+  border: 2.5px solid $rock;
+}
+.ghost-type{
+  @extend .normal-type;
+  border: 2.5px solid $ghost;
+}
+.dragon-type{
+  @extend .normal-type;
+  border: 2.5px solid $dragon;
+}
+.dark-type{
+  @extend .normal-type;
+  border: 2.5px solid $dark;
+}
+.steel-type{
+  @extend .normal-type;
+  border: 2.5px solid $steel;
+}
+.fairy-type{
+  @extend .normal-type;
+  border: 2.5px solid $fairy;
+}

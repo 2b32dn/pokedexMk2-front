@@ -1,26 +1,27 @@
 import React from 'react';
 import Capitalize from '../../tools/Capitalize'
 
+import StatusBar from '../modal/StatusBar'
+import Image from '../modal/Image'
 
 const Modal = ({ show, pokemon, pokemonExtra, pkmnTypes }) => {
+
 	let modalClasses = 'modal-hidden';
 	if (show) {
 		modalClasses = 'modal';
 	}
 	console.log(pokemon)
-	// let type = pokemon.types.map( types => {
-		
-	// })
-	return pokemon ? (
-		<div className={modalClasses} >
-			
+	console.log(pokemonExtra)
 
+	return (pokemon && pokemonExtra && pkmnTypes) ? (
+		<div className={modalClasses} >
+			{/* {types.push(pkmnTypes.map( (type)=> type.name))} */}
 			<div className="modal-pokemon-name">
 				{Capitalize(pokemon.name)}
 			</div>
 
 			<div className="modal-img-stats">
-				<img alt={pokemon.name} src={pokemon.sprites.front_default} className="modal-img"/>
+				<Image img={pokemon.sprites.front_default} name={pokemon.name} type={pokemon.types.map(type => type.type.name)}/>
 				<div className="modal-stats">
 					{pokemon.stats.reverse().map((stat) => (
 						<ul key={stat.stat.name} className="modal-stats-name">
@@ -33,12 +34,7 @@ const Modal = ({ show, pokemon, pokemonExtra, pkmnTypes }) => {
 				<div className="modal-stats">
 					{pokemon.stats.reverse().map((stat) => (
 						<ul key={stat.stat.name}>
-							<span className="modal-stats-bar">
-								<div className="modal-stats-front" style={{width: `${stat.base_stat}%`}}>{stat.base_stat}</div>
-								<div className="modal-stats-back">
-								pokemon
-								</div>
-							</span>
+							<StatusBar stat={stat.base_stat} type={pokemon.types.map(type => type.type.name)}/>
 						</ul>
 					))}
 				</div>
@@ -50,24 +46,35 @@ const Modal = ({ show, pokemon, pokemonExtra, pkmnTypes }) => {
 					)}
 				</div>
 			</div>
-
-			<div>
-				<div className="modal-characteristics">Characteristics</div>
+			<div className="modal-characteristics-title">Characteristics</div>
 				<div>
-					{pokemon.abilities.map((ability) => <div key={ability.ability.name} className="modal-abilities">{Capitalize(ability.ability.name).replace(/-/g, ' ')}</div>)}
+					{pokemonExtra.genera.map( genus => (genus.language.name === 'en')? <div key={genus.genus}>{genus.genus.replace(/é/g, 'e')}</div> : null)}
 				</div>
+				<div>
+					{pokemonExtra.flavor_text_entries.map( (entry, id) => 
+						(entry.version.name === "omega-ruby" && entry.language.name === "en" || entry.version.name === "ultra-sun" && entry.language.name === "en" )
+						? 
+							<div key={id}>{entry.flavor_text}</div> 
+						: 
+							null
+					)}
+				</div>
+				{/* <div>
+					Habitat: {pokemonExtra.habitat.name}
+				</div> */}
+				<div>
+					Egg Group: {pokemonExtra.egg_groups.map(group => <div key={group.name}>{group.name}</div>)}
+				</div>
+			<div className="modal-characteristics">
+				{pokemon.abilities.map((ability) => <div key={ability.ability.name}>{Capitalize(ability.ability.name).replace(/-/g, ' ')}</div>)}
 			</div>
-
-			<div>
-				<div className="modal-moves-title">Moves</div>
-			</div>
-
+		 	<div className="modal-moves-title">Moves</div>
 			<div className="modal-moves">
      		{pokemon.moves.map(move=> <div key={move.move.name}>{Capitalize(move.move.name).replace(/-/g, ' ')}</div>)}
 			</div>
 		</div>
 	) : (
-		<div className={modalClasses}>No Data</div>
+		<div className={modalClasses}></div>
 	);
 };
 

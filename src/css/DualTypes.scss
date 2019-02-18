@@ -1,0 +1,801 @@
+// Dual Types
+
+// Normal
+.normal-fire-pokemon, .fire-normal-pokemon {
+  background: $normal;
+  background: $fire;
+  padding-left: 20px;
+}
+.normal-water-pokemon, .water-normal-pokemon {
+  background: $normal;
+  background: $water;
+  padding-left: 20px;
+}
+.normal-electric-pokemon, .electric-normal-pokemon {
+  background: $normal;
+  background: $electric;
+  padding-left: 20px;
+}
+.normal-grass-pokemon, .grass-normal-pokemon {
+  background: $normal;
+  background: $grass;
+  padding-left: 20px;
+}
+.normal-ice-pokemon, .ice-normal-pokemon {
+  background: $normal;
+  background: $ice;
+  padding-left: 20px;
+}
+.normal-fighting-pokemon, .fighting-normal-pokemon {
+  background: $normal;
+  background: $fighting;
+  padding-left: 20px;
+}
+.normal-poison-pokemon, .poison-normal-pokemon {
+  background: $normal;
+  background: $poison;
+  padding-left: 20px;
+}
+.normal-ground-pokemon, .ground-normal-pokemon {
+  background: $normal;
+  background: $ground;
+  padding-left: 20px;
+}
+.normal-flying-pokemon, .flying-normal-pokemon {
+  background: $normal;
+  background: $flying;
+  padding-left: 20px;
+}
+.normal-psychic-pokemon, .psychic-normal-pokemon {
+  background: $normal;
+  background: $psychic;
+  padding-left: 20px;
+}
+.normal-bug-pokemon, .bug-normal-pokemon {
+  background: $normal;
+  background: $bug;
+  padding-left: 20px;
+}
+.normal-rock-pokemon, .rock-normal-pokemon {
+  background: $normal;
+  background: $rock;
+  padding-left: 20px;
+}
+.normal-ghost-pokemon, .ghost-normal-pokemon {
+  background: $normal;
+  background: $ghost;
+  padding-left: 20px;
+}
+.normal-dragon-pokemon, .dragon-normal-pokemon {
+  background: $normal;
+  background: $dragon;
+  padding-left: 20px;
+}
+.normal-dark-pokemon, .dark-normal-pokemon {
+  background: $normal;
+  background: $dark;
+  padding-left: 20px;
+}
+.normal-steel-pokemon, .steel-normal-pokemon {
+  background: $normal;
+  background: $steel;
+  padding-left: 20px;
+}
+.normal-fairy-pokemon, .fairy-normal-pokemon {
+  background: $normal;
+  background: $fairy;
+  padding-left: 20px;
+}
+
+// Fire
+.fire-water-pokemon, .water-fire-pokemon {
+  background: $fire;
+  background: $water;
+  padding-left: 20px;
+}
+.fire-electric-pokemon, .electric-fire-pokemon {
+  background: $fire;
+  background: $electric;
+  padding-left: 20px;
+}
+.fire-grass-pokemon, .grass-fire-pokemon {
+  background: $fire;
+  background: $grass;
+  padding-left: 20px;
+}
+.fire-ice-pokemon, .ice-fire-pokemon {
+  background: $fire;
+  background: $ice;
+  padding-left: 20px;
+}
+.fire-fighting-pokemon, .fighting-fire-pokemon {
+  background: $fire;
+  background: $fighting;
+  padding-left: 20px;
+}
+.fire-poison-pokemon, .poison-fire-pokemon {
+  background: $fire;
+  background: $poison;
+  padding-left: 20px;
+}
+.fire-ground-pokemon, .ground-fire-pokemon {
+  background: $fire;
+  background: $ground;
+  padding-left: 20px;
+}
+.fire-flying-pokemon, .flying-fire-pokemon {
+  background: $fire;
+  background: $flying;
+  padding-left: 20px;
+}
+.fire-psychic-pokemon, .psychic-fire-pokemon {
+  background: $fire;
+  background: $psychic;
+  padding-left: 20px;
+}
+.fire-bug-pokemon, .bug-fire-pokemon {
+  background: $fire;
+  background: $bug;
+  padding-left: 20px;
+}
+.fire-rock-pokemon, .rock-fire-pokemon {
+  background: $fire;
+  background: $rock;
+  padding-left: 20px;
+}
+.fire-ghost-pokemon, .ghost-fire-pokemon {
+  background: $fire;
+  background: $ghost;
+  padding-left: 20px;
+}
+.fire-dragon-pokemon, .dragon-fire-pokemon {
+  background: $fire;
+  background: $dragon;
+  padding-left: 20px;
+}
+.fire-dark-pokemon, .dark-fire-pokemon {
+  background: $fire;
+  background: $dark;
+  padding-left: 20px;
+}
+.fire-steel-pokemon, .steel-fire-pokemon {
+  background: $fire;
+  background: $steel;
+  padding-left: 20px;
+}
+.fire-fairy-pokemon, .fairy-fire-pokemon {
+  background: $fire;
+  background: $fairy;
+  padding-left: 20px;
+}
+
+// Water
+.water-electric-pokemon, .electric-water-pokemon {
+  background: $water;
+  background: $electric;
+  padding-left: 20px;
+}
+.water-grass-pokemon, .grass-water-pokemon {
+  background: $water;
+  background: $grass;
+  padding-left: 20px;
+}
+.water-ice-pokemon, .ice-water-pokemon {
+  background: $water;
+  background: $ice;
+  padding-left: 20px;
+}
+.water-fighting-pokemon, .fighting-water-pokemon {
+  background: $water;
+  background: $fighting;
+  padding-left: 20px;
+}
+.water-poison-pokemon, .poison-water-pokemon {
+  background: $water;
+  background: $poison;
+  padding-left: 20px;
+}
+.water-ground-pokemon, .ground-water-pokemon {
+  background: $water;
+  background: $ground;
+  padding-left: 20px;
+}
+.water-flying-pokemon, .flying-water-pokemon {
+  background: $water;
+  background: $flying;
+  padding-left: 20px;
+}
+.water-psychic-pokemon, .psychic-water-pokemon {
+  background: $water;
+  background: $psychic;
+  padding-left: 20px;
+}
+.water-bug-pokemon, .bug-water-pokemon {
+  background: $water;
+  background: $bug;
+  padding-left: 20px;
+}
+.water-rock-pokemon, .rock-water-pokemon {
+  background: $water;
+  background: $rock;
+  padding-left: 20px;
+}
+.water-ghost-pokemon, .ghost-water-pokemon {
+  background: $water;
+  background: $ghost;
+  padding-left: 20px;
+}
+.water-dragon-pokemon, .dragon-water-pokemon {
+  background: $water;
+  background: $dragon;
+  padding-left: 20px;
+}
+.water-dark-pokemon, .dark-water-pokemon {
+  background: $water;
+  background: $dark;
+  padding-left: 20px;
+}
+.water-steel-pokemon, .steel-water-pokemon {
+  background: $water;
+  background: $steel;
+  padding-left: 20px;
+}
+.water-fairy-pokemon, .fairy-water-pokemon {
+  background: $water;
+  background: $fairy;
+  padding-left: 20px;
+}
+
+// Electric
+.electric-grass-pokemon, .grass-electric-pokemon {
+  background: $electric;
+  background: $grass;
+  padding-left: 20px;
+}
+.electric-ice-pokemon, .ice-electric-pokemon {
+  background: $electric;
+  background: $ice;
+  padding-left: 20px;
+}
+.electric-fighting-pokemon, .fighting-electric-pokemon {
+  background: $electric;
+  background: $fighting;
+  padding-left: 20px;
+}
+.electric-poison-pokemon, .poison-electric-pokemon {
+  background: $electric;
+  background: $poison;
+  padding-left: 20px;
+}
+.electric-ground-pokemon, .ground-electric-pokemon {
+  background: $electric;
+  background: $ground;
+  padding-left: 20px;
+}
+.electric-flying-pokemon, .flying-electric-pokemon {
+  background: $electric;
+  background: $flying;
+  padding-left: 20px;
+}
+.electric-psychic-pokemon, .psychic-electric-pokemon {
+  background: $electric;
+  background: $psychic;
+  padding-left: 20px;
+}
+.electric-bug-pokemon, .bug-electric-pokemon {
+  background: $electric;
+  background: $bug;
+  padding-left: 20px;
+}
+.electric-rock-pokemon, .rock-electric-pokemon {
+  background: $electric;
+  background: $rock;
+  padding-left: 20px;
+}
+.electric-ghost-pokemon, .ghost-electric-pokemon {
+  background: $electric;
+  background: $ghost;
+  padding-left: 20px;
+}
+.electric-dragon-pokemon, .dragon-electric-pokemon {
+  background: $electric;
+  background: $dragon;
+  padding-left: 20px;
+}
+.electric-dark-pokemon, .dark-electric-pokemon {
+  background: $electric;
+  background: $dark;
+  padding-left: 20px;
+}
+.electric-steel-pokemon, .steel-electric-pokemon {
+  background: $electric;
+  background: $steel;
+  padding-left: 20px;
+}
+.electric-fairy-pokemon, .fairy-electric-pokemon {
+  background: $electric;
+  background: $fairy;
+  padding-left: 20px;
+}
+
+// Grass
+
+.grass-ice-pokemon, .ice-grass-pokemon {
+  background: $grass;
+  background: $ice;
+  padding-left: 20px;
+}
+.grass-fighting-pokemon, .fighting-grass-pokemon {
+  background: $grass;
+  background: $fighting;
+  padding-left: 20px;
+}
+.grass-poison-pokemon, .poison-grass-pokemon {
+  background: $grass;
+  background: $poison;
+  padding-left: 20px;
+}
+.grass-ground-pokemon, .ground-grass-pokemon {
+  background: $grass;
+  background: $ground;
+  padding-left: 20px;
+}
+.grass-flying-pokemon, .flying-grass-pokemon {
+  background: $grass;
+  background: $flying;
+  padding-left: 20px;
+}
+.grass-psychic-pokemon, .psychic-grass-pokemon {
+  background: $grass;
+  background: $psychic;
+  padding-left: 20px;
+}
+.grass-bug-pokemon, .bug-grass-pokemon {
+  background: $grass;
+  background: $bug;
+  padding-left: 20px;
+}
+.grass-rock-pokemon, .rock-grass-pokemon {
+  background: $grass;
+  background: $rock;
+  padding-left: 20px;
+}
+.grass-ghost-pokemon, .ghost-grass-pokemon {
+  background: $grass;
+  background: $ghost;
+  padding-left: 20px;
+}
+.grass-dragon-pokemon, .dragon-grass-pokemon {
+  background: $grass;
+  background: $dragon;
+  padding-left: 20px;
+}
+.grass-dark-pokemon, .dark-grass-pokemon {
+  background: $grass;
+  background: $dark;
+  padding-left: 20px;
+}
+.grass-steel-pokemon, .steel-grass-pokemon {
+  background: $grass;
+  background: $steel;
+  padding-left: 20px;
+}
+.grass-fairy-pokemon, .fairy-grass-pokemon {
+  background: $grass;
+  background: $fairy;
+  padding-left: 20px;
+}
+
+// Ice
+.ice-fighting-pokemon, .fighting-ice-pokemon {
+  background: $ice;
+  background: $fighting;
+  padding-left: 20px;
+}
+.ice-poison-pokemon, .poison-ice-pokemon {
+  background: $ice;
+  background: $poison;
+  padding-left: 20px;
+}
+.ice-ground-pokemon, .ground-ice-pokemon {
+  background: $ice;
+  background: $ground;
+  padding-left: 20px;
+}
+.ice-flying-pokemon, .flying-ice-pokemon {
+  background: $ice;
+  background: $flying;
+  padding-left: 20px;
+}
+.ice-psychic-pokemon, .psychic-ice-pokemon {
+  background: $ice;
+  background: $psychic;
+  padding-left: 20px;
+}
+.ice-bug-pokemon, .bug-ice-pokemon {
+  background: $ice;
+  background: $bug;
+  padding-left: 20px;
+}
+.ice-rock-pokemon, .rock-ice-pokemon {
+  background: $ice;
+  background: $rock;
+  padding-left: 20px;
+}
+.ice-ghost-pokemon, .ghost-ice-pokemon {
+  background: $ice;
+  background: $ghost;
+  padding-left: 20px;
+}
+.ice-dragon-pokemon, .dragon-ice-pokemon {
+  background: $ice;
+  background: $dragon;
+  padding-left: 20px;
+}
+.ice-dark-pokemon, .dark-ice-pokemon {
+  background: $ice;
+  background: $dark;
+  padding-left: 20px;
+}
+.ice-steel-pokemon, .steel-ice-pokemon {
+  background: $ice;
+  background: $steel;
+  padding-left: 20px;
+}
+.ice-fairy-pokemon, .fairy-ice-pokemon {
+  background: $ice;
+  background: $fairy;
+  padding-left: 20px;
+}
+
+// Fighting
+.fighting-poison-pokemon, .poison-fighting-pokemon {
+  background: $fighting;
+  background: $poison;
+  padding-left: 20px;
+}
+.fighting-ground-pokemon, .ground-fighting-pokemon {
+  background: $fighting;
+  background: $ground;
+  padding-left: 20px;
+}
+.fighting-flying-pokemon, .flying-fighting-pokemon {
+  background: $fighting;
+  background: $flying;
+  padding-left: 20px;
+}
+.fighting-psychic-pokemon, .psychic-fighting-pokemon {
+  background: $fighting;
+  background: $psychic;
+  padding-left: 20px;
+}
+.fighting-bug-pokemon, .bug-fighting-pokemon {
+  background: $fighting;
+  background: $bug;
+  padding-left: 20px;
+}
+.fighting-rock-pokemon, .rock-fighting-pokemon {
+  background: $fighting;
+  background: $rock;
+  padding-left: 20px;
+}
+.fighting-ghost-pokemon, .ghost-fighting-pokemon {
+  background: $fighting;
+  background: $ghost;
+  padding-left: 20px;
+}
+.fighting-dragon-pokemon, .dragon-fighting-pokemon {
+  background: $fighting;
+  background: $dragon;
+  padding-left: 20px;
+}
+.fighting-dark-pokemon, .dark-fighting-pokemon {
+  background: $fighting;
+  background: $dark;
+  padding-left: 20px;
+}
+.fighting-steel-pokemon, .steel-fighting-pokemon {
+  background: $fighting;
+  background: $steel;
+  padding-left: 20px;
+}
+.fighting-fairy-pokemon, .fairy-fighting-pokemon {
+  background: $fighting;
+  background: $fairy;
+  padding-left: 20px;
+}
+
+// Poison
+.poison-ground-pokemon, .ground-poison-pokemon {
+  background: $poison;
+  background: $ground;
+  padding-left: 20px;
+}
+.poison-flying-pokemon, .flying-poison-pokemon {
+  background: $poison;
+  background: $flying;
+  padding-left: 20px;
+}
+.poison-psychic-pokemon, .psychic-poison-pokemon {
+  background: $poison;
+  background: $psychic;
+  padding-left: 20px;
+}
+.poison-bug-pokemon, .bug-poison-pokemon {
+  background: $poison;
+  background: $bug;
+  padding-left: 20px;
+}
+.poison-rock-pokemon, .rock-poison-pokemon {
+  background: $poison;
+  background: $rock;
+  padding-left: 20px;
+}
+.poison-ghost-pokemon, .ghost-poison-pokemon {
+  background: $poison;
+  background: $ghost;
+  padding-left: 20px;
+}
+.poison-dragon-pokemon, .dragon-poison-pokemon {
+  background: $poison;
+  background: $dragon;
+  padding-left: 20px;
+}
+.poison-dark-pokemon, .dark-poison-pokemon {
+  background: $poison;
+  background: $dark;
+  padding-left: 20px;
+}
+.poison-steel-pokemon, .steel-poison-pokemon {
+  background: $poison;
+  background: $steel;
+  padding-left: 20px;
+}
+.poison-fairy-pokemon, .fairy-poison-pokemon {
+  background: $poison;
+  background: $fairy;
+  padding-left: 20px;
+}
+
+// Ground
+.ground-flying-pokemon, .flying-ground-pokemon {
+  background: $ground;
+  background: $flying;
+  padding-left: 20px;
+}
+.ground-psychic-pokemon, .psychic-ground-pokemon {
+  background: $ground;
+  background: $psychic;
+  padding-left: 20px;
+}
+.ground-bug-pokemon, .bug-ground-pokemon {
+  background: $ground;
+  background: $bug;
+  padding-left: 20px;
+}
+.ground-rock-pokemon, .rock-ground-pokemon {
+  background: $ground;
+  background: $rock;
+  padding-left: 20px;
+}
+.ground-ghost-pokemon, .ghost-ground-pokemon {
+  background: $ground;
+  background: $ghost;
+  padding-left: 20px;
+}
+.ground-dragon-pokemon, .dragon-ground-pokemon {
+  background: $ground;
+  background: $dragon;
+  padding-left: 20px;
+}
+.ground-dark-pokemon, .dark-ground-pokemon {
+  background: $ground;
+  background: $dark;
+  padding-left: 20px;
+}
+.ground-steel-pokemon, .steel-ground-pokemon {
+  background: $ground;
+  background: $steel;
+  padding-left: 20px;
+}
+.ground-fairy-pokemon, .fairy-ground-pokemon {
+  background: $ground;
+  background: $fairy;
+  padding-left: 20px;
+}
+
+// Flying
+.flying-psychic-pokemon, .bug-psychic-pokemon {
+  background: $flying;
+  background: $psychic;
+  padding-left: 20px;
+}
+.flying-bug-pokemon, .bug-flying-pokemon {
+  background: $flying;
+  background: $bug;
+  padding-left: 20px;
+}
+.flying-rock-pokemon, .rock-flying-pokemon {
+  background: $flying;
+  background: $rock;
+  padding-left: 20px;
+}
+.flying-ghost-pokemon, .ghost-flying-pokemon {
+  background: $flying;
+  background: $ghost;
+  padding-left: 20px;
+}
+.flying-dragon-pokemon, .dragon-flying-pokemon {
+  background: $flying;
+  background: $dragon;
+  padding-left: 20px;
+}
+.flying-dark-pokemon, .dark-flying-pokemon {
+  background: $flying;
+  background: $dark;
+  padding-left: 20px;
+}
+.flying-steel-pokemon, .steel-flying-pokemon {
+  background: $flying;
+  background: $steel;
+  padding-left: 20px;
+}
+.flying-fairy-pokemon, .fairy-flying-pokemon {
+  background: $flying;
+  background: $fairy;
+  padding-left: 20px;
+}
+
+// Psychic
+.psychic-bug-pokemon, .bug-psychic-pokemon {
+  background: $psychic;
+  background: $bug;
+  padding-left: 20px;
+}
+.psychic-rock-pokemon, .rock-psychic-pokemon {
+  background: $psychic;
+  background: $rock;
+  padding-left: 20px;
+}
+.psychic-ghost-pokemon, .ghost-psychic-pokemon {
+  background: $psychic;
+  background: $ghost;
+  padding-left: 20px;
+}
+.psychic-dragon-pokemon, .dragon-psychic-pokemon {
+  background: $psychic;
+  background: $dragon;
+  padding-left: 20px;
+}
+.psychic-dark-pokemon, .dark-psychic-pokemon {
+  background: $psychic;
+  background: $dark;
+  padding-left: 20px;
+}
+.psychic-steel-pokemon, .steel-psychic-pokemon {
+  background: $psychic;
+  background: $steel;
+  padding-left: 20px;
+}
+.psychic-fairy-pokemon, .fairy-psychic-pokemon {
+  background: $psychic;
+  background: $fairy;
+  padding-left: 20px;
+}
+
+// Bug
+.bug-rock-pokemon, .rock-bug-pokemon {
+  background: $bug;
+  background: $rock;
+  padding-left: 20px;
+}
+.bug-ghost-pokemon, .ghost-bug-pokemon {
+  background: $bug;
+  background: $ghost;
+  padding-left: 20px;
+}
+.bug-dragon-pokemon, .dragon-bug-pokemon {
+  background: $bug;
+  background: $dragon;
+  padding-left: 20px;
+}
+.bug-dark-pokemon, .dark-bug-pokemon {
+  background: $bug;
+  background: $dark;
+  padding-left: 20px;
+}
+.bug-steel-pokemon, .steel-bug-pokemon {
+  background: $bug;
+  background: $steel;
+  padding-left: 20px;
+}
+.bug-fairy-pokemon, .fairy-bug-pokemon {
+  background: $bug;
+  background: $fairy;
+  padding-left: 20px;
+}
+
+// Rock
+.rock-ghost-pokemon, .ghost-rock-pokemon {
+  background: $rock;
+  background: $ghost;
+  padding-left: 20px;
+}
+.rock-dragon-pokemon, .dragon-rock-pokemon {
+  background: $rock;
+  background: $dragon;
+  padding-left: 20px;
+}
+.rock-dark-pokemon, .dark-rock-pokemon {
+  background: $rock;
+  background: $dark;
+  padding-left: 20px;
+}
+.rock-steel-pokemon, .steel-rock-pokemon {
+  background: $rock;
+  background: $steel;
+  padding-left: 20px;
+}
+.rock-fairy-pokemon, .fairy-rock-pokemon {
+  background: $rock;
+  background: $fairy;
+  padding-left: 20px;
+}
+
+// Ghost
+.ghost-dragon-pokemon, .dragon-ghost-pokemon {
+  background: $ghost;
+  background: $dragon;
+  padding-left: 20px; 
+}
+.ghost-dark-pokemon, .dark-ghost-pokemon {
+  background: $ghost;
+  background: $dark;
+  padding-left: 20px; 
+}
+.ghost-steel-pokemon, .steel-ghost-pokemon {
+  background: $ghost;
+  background: $steel;
+  padding-left: 20px; 
+}
+.ghost-fairy-pokemon, .fairy-ghost-pokemon {
+  background: $ghost;
+  background: $fairy;
+  padding-left: 20px; 
+}
+
+// Dragon
+.dragon-dark-pokemon, .dark-dragon-pokemon {
+  background: $dragon;
+  background: $dark;
+  padding-left: 20px;
+}
+.dragon-steel-pokemon, .steel-dragon-pokemon {
+  background: $dragon;
+  background: $steel;
+  padding-left: 20px;
+}
+.dragon-fairy-pokemon, .fairy-dragon-pokemon {
+  background: $dragon;
+  background: $fairy;
+  padding-left: 20px;
+}
+
+// Dark
+.dark-steel-pokemon, .steel-dark-pokemon {
+  background: $dark;
+  background: $steel;
+  padding-left: 20px;
+}
+.dark-fairy-pokemon, .fairy-dark-pokemon {
+  background: $dark;
+  background: $fairy;
+  padding-left: 20px;
+}
+
+// Steel
+.steel-fairy-pokemon, .fairy-steel-pokemon {
+  background: $steel;
+  background: $fairy;
+  padding-left: 20px;
+}

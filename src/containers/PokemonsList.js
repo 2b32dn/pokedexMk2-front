@@ -3,7 +3,7 @@ import Capitalize from '../tools/Capitalize';
 // import { Link } from 'react-router-dom'
 // import Modal from '../components/modal/Modal'
 
-const PokemonsList = ({ pokemons, show, targetPokemon, pokemonExtra, getPokemonTypes }) => {
+const PokemonsList = ({ pokemons, show, targetPokemon, pokemonExtra }) => {
 	// async function loadingPokemonData(id) {
 	// 	try {
 	// 		const pokemon = await Promise.all(targetPokemon(id), pokemonExtra(id));
@@ -24,7 +24,6 @@ const PokemonsList = ({ pokemons, show, targetPokemon, pokemonExtra, getPokemonT
 							show();
 							targetPokemon(base_info.id);
 							pokemonExtra(base_info.id);
-							getPokemonTypes();
 						}}
 						value={base_info.id}
 						className="pokmon-button"

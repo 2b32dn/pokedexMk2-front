@@ -52,28 +52,9 @@ class PokemonsPage extends Component {
 		}
 	};
 
-	fetchTypes = async () => {
-		try{
-			const fetchTypes = await fetchPokemonTypes();
-			this.setState({pokemonTypes: fetchTypes.results})
-		} catch (err){
-			console.log(err)
-		}
-	}
-
-	// nextPokemonList = () => {
-	// 	console.log(this.state.nextPokemons)
-	// 	this.setState( (e) => {
-	// 		return {pokemon: e.nextPokemons}
-	// 	})
-	// 	console.log(this.state.pokemon)
-	// }
-
 	componentDidMount = async () => {
 		try {
-
 			// Fetch pokemonsURL
-
 			const pokemons = await fetchPokemonsURL();
 			// console.log(pokemons)
 			const pokemonData = await Promise.all(
@@ -83,30 +64,9 @@ class PokemonsPage extends Component {
 				})
 			);
 			this.setState({ pokemons: pokemonData });
-			
-		// 	// Fetch next list of pokemonsURL
 
-		// 	const pokemonsNext = await fetchNextPreviousPokemonsURL(pokemons.next)
-		// 	// console.log(pokemonsNext)
-		// 	const pokemonNextData = await Promise.all(
-		// 		pokemonsNext.results.map(async (result) => {
-		// 			const pokemon = await fetch(result.url);
-		// 			return pokemon.json();
-		// 		})
-		// 	);
-		// 	this.setState({ nextPokemons: pokemonNextData });
-
-		// 	// Fetch previous list of PokemonsURL
-
-		// 	const pokemonsPrevious = await fetchNextPreviousPokemonsURL(pokemonsNext.previous)
-		// 	// console.log(pokemonsPrevious)
-		// 	const pokemonPreviousData = await Promise.all(
-		// 		pokemonsPrevious.results.map(async (result) => {
-		// 			const pokemon = await fetch(result.url);
-		// 			return pokemon.json();
-		// 		})
-		// 	);
-		// 	this.setState({ previousPokemons: pokemonPreviousData });
+			const pokemonsTypes = await fetchPokemonTypes();
+			this.setState({pokemonTypes: pokemonsTypes.results})
 
 		} catch (err) {
 			console.log(err);
@@ -131,7 +91,6 @@ class PokemonsPage extends Component {
 					show={this.openModal}
 					targetPokemon={this.targetPokemon}
 					pokemonExtra={this.targetPokemonExtra}
-					getPokemonTypes={this.fetchTypes}
 				/>
 				<Modal pokemons={pokemons} pokemon={pokemon} pokemonExtra={pokemonExtra} show={this.state.modalOpen} pkmnTypes={this.state.pokemonTypes}/>
 				<div>{backDrop}</div>
