@@ -19,12 +19,6 @@ const Modal = ({ show, pokemon, pokemonExtra, pkmnTypes }) => {
 	if (!pokemon || !pokemonExtra || !pkmnTypes) {
 		return <div className={modalClasses}></div>
 	}
-	
-	const englishFilterText = pokemonExtra.flavor_text_entries.filter( entry => {
-		return (entry.version.name === "omega-ruby" || entry.version.name === "ultra-sun") && entry.language.name === "en" 
-	})[0].flavor_text
-
-	console.log(englishFilterText)
 
 	return (
 		<div className={modalClasses} >
@@ -63,7 +57,9 @@ const Modal = ({ show, pokemon, pokemonExtra, pkmnTypes }) => {
 			<div className="modal-characteristics">
 				{pokemonExtra.genera.map( genus => (genus.language.name === 'en') ? <h3 key={genus.genus}>{genus.genus.replace(/é/g, 'e')}</h3> : null)}
 				<div>
-				{englishFilterText}
+					{pokemonExtra.flavor_text_entries.filter( entry => {
+						return (entry.version.name === "omega-ruby" || entry.version.name === "ultra-sun") && entry.language.name === "en" 
+					})[0].flavor_text}
 				</div>
 				Egg Group: {pokemonExtra.egg_groups.map(group => <li key={group.name}>{Capitalize(group.name).replace(/No-eggs/g, 'Legendary')}</li>)}
 				Abilities: {pokemon.abilities.map((ability) => 
