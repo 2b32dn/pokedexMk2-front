@@ -1,4 +1,4 @@
-const API_URL = "https://pokeapi.co/api/v2/pokemon/?limit=14/" /* 802 */
+const API_URL = "https://pokeapi.co/api/v2/pokemon/?limit=802/" /* 802 */
 const API2_URL = "https://pokeapi.co/api/v2/pokemon/"
 const API3_URL = "https://pokeapi.co/api/v2/pokemon-species/"
 const API4_URL = "https://pokeapi.co/api/v2/type/"

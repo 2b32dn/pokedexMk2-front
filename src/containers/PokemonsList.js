@@ -28,7 +28,7 @@ const PokemonsList = ({ pokemons, show, targetPokemon, pokemonExtra }) => {
 						value={base_info.id}
 						className="pokmon-button"
 					>
-						{Capitalize(base_info.name)}
+						{Capitalize(base_info.species.name)}
 					</button>
 				</div>
 			))}
