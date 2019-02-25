@@ -59,18 +59,26 @@ const Modal = ({ show, pokemon, pokemonExtra, pkmnTypes }) => {
 			</div>
 			<div className="modal-characteristics-title">Characteristics</div>
 			<div className="modal-characteristics">
-				{pokemonExtra.genera.map( genus => (genus.language.name === 'en') ? <h3 key={genus.genus}>{genus.genus.replace(/é/g, 'e')}</h3> : null)}
-				<div>
+				{pokemonExtra.genera.map( genus => (genus.language.name === 'en') ? <div key={genus.genus} className="modal-genus">{genus.genus.replace(/é/g, 'e')}</div> : null)}
+				<div className="modal-flavor">
 					{pokemonFlavorEntry}
 				</div>
-				Egg Group: {pokemonExtra.egg_groups.map(group => <li key={group.name}>{Capitalize(group.name).replace(/No-eggs/g, 'Legendary')}</li>)}
-				Abilities: {pokemon.abilities.map((ability) => 
-					(!ability.is_hidden)
-					? 
-						<div key={ability.ability.name}>{Capitalize(ability.ability.name).replace(/-/g, ' ')}</div> 
-					: 
-						<div key={ability.ability.name}>Hidden {Capitalize(ability.ability.name).replace(/-/g, ' ')}</div>
-				)}
+				<div>
+					<div className="modal-egg-group">
+						Egg Group: 
+					</div>
+					{pokemonExtra.egg_groups.map(group => <li key={group.name} className="modal-egg-name">{Capitalize(group.name)}</li>)}
+				</div>
+				<div>
+					<div className="modal-abilities">Abilities:</div> 
+					{pokemon.abilities.map((ability) => 
+						(ability.is_hidden)
+						? 
+							<div key={ability.ability.name}>{Capitalize(ability.ability.name).replace(/-/g, ' ')} <span> Hidden</span></div>
+						: 
+							<div key={ability.ability.name}>{Capitalize(ability.ability.name).replace(/-/g, ' ')}</div>
+					)}
+				</div>
 			</div>
 		 	<div className="modal-moves-title">Moves</div>
 			<div className="modal-moves">

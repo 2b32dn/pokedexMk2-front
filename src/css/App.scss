@@ -207,8 +207,33 @@ $fairy: #D685AD;
 }
 
 .modal-characteristics {
-  margin: 1rem;
+  margin: 0 1rem;
   padding: 1rem;
+  // display: flex;
+  // flex-direction: column;
+  .modal-egg-group {
+    margin: 0.5rem 0;
+    font-weight: bold;
+  }
+  .modal-egg-name {
+    list-style-type: none;
+  }
+  .modal-genus {
+    margin: 0.5rem 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  .modal-flavor {
+    margin: 0.5rem 0;
+    padding: 0;
+    width: 500px;
+  }
+  .modal-abilities{
+    margin: 0.5rem 0;
+    font-weight: bold;
+  }
 }
 
 .modal-moves-title{
