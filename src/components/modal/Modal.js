@@ -74,7 +74,7 @@ const Modal = ({ show, pokemon, pokemonExtra, pkmnTypes }) => {
 					{pokemon.abilities.map((ability) => 
 						(ability.is_hidden)
 						? 
-							<div key={ability.ability.name}>{Capitalize(ability.ability.name).replace(/-/g, ' ')} <span> Hidden</span></div>
+							<div key={ability.ability.name}>{Capitalize(ability.ability.name).replace(/-/g, ' ')} <span className="modal-ability-hidden">( Hidden )</span></div>
 						: 
 							<div key={ability.ability.name}>{Capitalize(ability.ability.name).replace(/-/g, ' ')}</div>
 					)}
