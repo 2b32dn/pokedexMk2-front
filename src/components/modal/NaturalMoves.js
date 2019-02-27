@@ -6,7 +6,7 @@ const NaturalMoves = ({moves}) => {
   moves.map(move => 
      Moves.push(Capitalize(move.move.name).replace(/-/g, ' '))
   )
-  // console.log(Moves)
+  console.log(Moves)
   return (
     <div>
       {Moves.sort().map( move => <div key={move}>{move}</div>)}
