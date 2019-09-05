@@ -12,7 +12,7 @@ const PokemonsList = ({ pokemons, show, targetPokemon, pokemonExtra }) => {
 	// 		console.log(err);
 	// 	}
 	// }
-	
+
 	return (
 		<div className="pokemon-main">
 			{pokemons.map((base_info) => (
