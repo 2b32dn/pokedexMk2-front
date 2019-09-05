@@ -97,8 +97,8 @@ class PokemonsPage extends Component {
 				<div>{backDrop}</div>
 			</div>
 		) : (
-			<div>Loading Pokemons...</div>
-		);
+				<div>Loading Pokemons...</div>
+			);
 	}
 }
 
