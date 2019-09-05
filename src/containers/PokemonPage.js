@@ -18,7 +18,7 @@ class PokemonPage extends Component {
       ?
         <div>hi</div>
       :  
-        <div>Loading</div>
+        <div>Loading.</div>
     )
   }
 }
